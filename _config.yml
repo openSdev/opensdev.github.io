@@ -1,5 +1,5 @@
-title: Midnight theme
-description: Midnight is a theme for GitHub Pages.
-show_downloads: true
-google_analytics:
 theme: jekyll-theme-midnight
+title: openSdev
+description: Free/Open Source Embedded Software Development
+show_downloads: false
+google_analytics: UA-98007880-1

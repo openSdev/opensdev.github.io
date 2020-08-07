@@ -2,122 +2,80 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+## About:
 
-[Link to another page](./another-page.html).
+> Hello, I am Shivamurthy Shastri, an Embedded Linux Engineer with 13+ years experience.  
+> openSdev is a space for me to work on Free and Open Source Softwares.
 
-There should be whitespace between paragraphs.
+## Work Experience:
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+### Linux Kernel: BSP, Device Drivers, Board Bring-up, Build systems
 
-# Header 1
+   * Board bring-up of <a href="http://www.arndaleboard.com/us/" target="_blank">Samsung Arndale board</a>(Exynos 5250), <a href="http://socionextus.com/blogs/sc1810-graphics-display-controller/" target="_blank">Socionext SC1810A SoC</a>(Cortex A9, Quad core)
+   * Device drivers for PWM, Watchdog, ADC, GPIO, USART, External Interrupt Controller, eMMC, NAND, and SPI NAND
+   * Device drivers for Signal Conditioning and Data Acquisition boards (interfaces: ADC, Digital I/O, UART)
+   * Device drivers for <a href="http://asttecs.com/gsm-gateway" target="_blank">GSM board</a>, <a href="https://www.slntech.com/client-10-2/product/arinc-429/" target="_blank">ARINC429</a>
+   * Customizing initramfs, rootfs, and kernel config
+   * Device Tree
+   * Kernel test frameworks like LTP, kselftest, iozone, fio, nvme-cli etc
+   * Yocto, OpenEmbedded, and Buildroot
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+### U-boot: Device Drivers, Board Bring-up
 
-## Header 2
+   * Board bring-up of <a href="http://socionextus.com/blogs/sc1810-graphics-display-controller/" target="_blank">Socionext SC1810A SoC</a>(Cortex A9, Quad core)
+   * Device drivers for GPIO, NAND and eMMC in SPL, U-boot
+   * Boot infrastructure in SPL and U-boot to boot Kernel
+   * Boot time optimization (booting Kernel from SPL)
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+### UEFI: Design/Development of Drivers, Board bring-up, Bug fixing
 
-### Header 3
+   * Board bring-up of <a href="http://www.arndaleboard.org/wiki/index.php/Main_Page" target="_blank">Samsung Arndale board</a>(Exynos 5250)
+   * Samsung Server boards(Exynos 5440, Exynos 7842), <a href="http://www.96boards.org/product/hikey" target="_blank">HiKey 96 board</a>(HiSilicon Kirin 620)
+   * Device drivers for Ethernet Controller(Synopsys GMAC and XGMAC), MDIO and Ethernet PHY(Marvell 88E1111), XAUI
+   * Device drivers for USB2.0(Synopsys OTG Controller), PCIe Root Complex, UART
+   * Reset protocol, SMBIOS platform driver, GRUB support, EFI Stubbed kernel booting
+   * eMMC, Fastboot, Apple USB-Eth Dongle (Ax88772b)
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+## Opensource Participation:
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+### Linux Kernel
 
-#### Header 4
+1. <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Shivamurthy+Shastri" target="_blank">git.kernel.org</a>
+2. <a href="http://patchwork.ozlabs.org/project/linux-mtd/list/?series=&submitter=75871&state=*&q=&archive=both&delegate=" target="_blank">linux-mtd</a>
+3. <a href="https://patchwork.kernel.org/project/linux-mmc/list/?series=&submitter=185569&state=*&q=&archive=both&delegate=" target="_blank">linux-mmc</a>
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+### U-boot
 
-##### Header 5
+1. <a href="https://gitlab.denx.de/u-boot/u-boot/-/commits/master?utf8=%E2%9C%93&search=Shivamurthy+Shastri" target="_blank">gitlab.denx.de</a>
+2. <a href="https://patchwork.ozlabs.org/project/uboot/list/?series=&submitter=75871&state=*&q=&archive=both&delegate=" target="_blank">u-boot</a>
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+### UEFI
 
-###### Header 6
+1. <a href="https://github.com/tianocore/edk2/commits?author=opensdev" target="_blank">Tianocore EDK2</a>
+2. <a href="http://git.linaro.org/uefi/linaro-edk2.git/log/?h=linaro-edk2-2014.04-fixups&qt=grep&q=Shivamurthy+Shastri" target="_blank">Samsung Arndale Board</a>
+3. <a href="https://github.com/96boards-hikey/OpenPlatformPkg/commits/hikey-aosp?author=opensdev" target="_blank">HiSilicon HiKey Board</a>
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+## Development Kits/Boards/Hardwares:
 
-### There's a horizontal rule below this.
+### Boards
 
-* * *
+   * <a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b" target="_blank">Raspberry Pi 4 (Model B)</a>: ARM64-bit development board
+   * <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b" target="_blank">Raspberry Pi 3 (Model B)</a>: ARM64-bit development board
+   * <a href="http://www.96boards.org/product/hikey" target="_blank">HiKey 96 boards</a>: ARM64-bit development board
+   * <a href="http://www.96boards.org/product/hikey960" target="_blank">Hikey 960 boards</a>: ARM64-bit development board
+   * <a href="http://www.96boards.org/product/carbon" target="_blank">Carbon 96 board</a>: ARM Cortex M4 development board
+   * <a href="https://beagleboard.org/blue" target="_blank">BeagleBone Blue</a>: ARM Cortex M3 development board
+   * <a href="http://www.96boards.org/product/bubblegum-96" target="_blank">Bubblegum-96</a>: ARM64-bit development board
+   * <a href="http://zedboard.org/product/zedboard" target="_blank">Xilinx Zed Board</a>: Development board
+   * <a href="https://developer.nvidia.com/embedded/jetson-agx-xavier-developer-kit" target="_blank">Nvidia Jetson AGX Xavier Developer Kit</a>: ARM64-bit Development board
 
-### Here is an unordered list:
+### Tools
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+   * <a href="https://www.seeedstudio.com/Open-Workbench-Logic-Sniffer-p-612.html" target="_blank">Open Workbench Logic Sniffer</a>(Logic Analyzer)
+   * <a href="https://www.seeedstudio.com/Bus-Blaster-v4-p-1416.html" target="_blank">Bus Blaster v4</a>(JTAG debugger)
 
-### And an ordered list:
+## Links
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+<a href="mailto:shivamurthy.shastri@opensdev.com">Email</a> &#0149; <a href="https://github.com/opensdev" target="_blank">GitHub</a> &#0149; <a href="https://twitter.com/opensdev" target="_blank">Twitter</a>
 
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+<p style="color:#696969">&#9400; 2017-2019 openSdev</p>
