@@ -75,7 +75,7 @@ strong {
   font-weight: normal;
 }
 
-.wrapper {
+.post-body {
   max-width:850px;
   margin:0 auto;
   position:relative;
@@ -91,13 +91,59 @@ strong {
   text-align:center;
 }
 
-.post-meta {
+.post-by {
   font-size:15px;
   max-width:850px;
   margin:0 auto;
   position:relative;
   padding: 0 20px;
   text-align:right;
+}
+
+.post-menu {
+  font-size:15px;
+  text-align:left;
+}
+
+.post-menu ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+.post-menu ul li {
+  width: 50px;
+}
+
+.post-nav {
+  font-size:15px;
+  text-align: center;
+}
+
+.post-nav ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+.post-nav ul li {
+  width: 120px;
+}
+
+.post-nav ul li a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.post-nav ul li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.post-nav ul li a.post-prev {
+}
+
+.post-nav ul li a.post-next {
+  background-color: gold;
+  color: black;
 }
 
 section img {
@@ -243,10 +289,11 @@ dt {
 }
 
 section {
-  max-width:650px;
-  padding: 30px 0px 50px 0px;
+  padding:10px 0 20px 0px;
+  font:18px/1.6 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#f0e7d5;
+  max-width:850px;
   margin: 20px 0;
-  margin-top: 70px;
 
   #title {
     border: 0;
