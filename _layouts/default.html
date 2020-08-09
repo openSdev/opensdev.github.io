@@ -19,31 +19,24 @@
 
   </head>
   <body>
-      <div id="header">
+      <div class="menu">
         <nav>
-          <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
-          {% if site.show_downloads %}
-            <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
-            <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
-            <li class="title">DOWNLOADS</li>
-          {% endif %}
+	  <li><a href="https://www.opensdev.com/">Home</a></li>
+	  <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
         </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
+      </div>
 
       <section>
         <div id="title">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <hr>
         </div>
-
+	<hr>
+	<div class="wrapper">
         {{ content }}
-
+	</div>
       </section>
-
-    </div>
 
     {% if site.google_analytics %}
       <script>

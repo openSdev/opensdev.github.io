@@ -3,9 +3,9 @@
 @import "rouge-base16-dark.scss";
 
 body {
-  padding: 20px 20px 20px 20px;
-  max-width: 800px;
-  font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0px 0px 20px 0px;
+  margin: 0px;
+  font: 16px/1.6 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #f0e7d5;
   font-weight: normal;
   background: #252525;
@@ -76,7 +76,36 @@ strong {
 }
 
 .wrapper {
+  max-width:850px;
+  margin:0 auto;
   position:relative;
+  padding: 0 20px;
+}
+
+.menu {
+  font-size:15px;
+  text-align:center;
+}
+
+.menu nav {
+  display: inline-flex;
+  list-style: none;
+}
+
+.menu nav li {
+  width: 120px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.menu nav li a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.menu nav li a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 section img {
