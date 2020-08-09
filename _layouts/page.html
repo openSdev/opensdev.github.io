@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>openSdev - 404 Page not found</title>
+    <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator | default: '-' }} {{ site.description }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/post-style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -19,19 +19,20 @@
   </head>
 
   <body>
-    <div class="wrapper">
-
+    <div class="post-body">
+      <div class="post-menu">
+        <ul>
+          <li><a href="https://www.opensdev.com/">Home</a></li>
+        </ul>
+      </div>
       <section>
         <div id="title">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
         </div>
 	<hr>
-
         {{ content }}
-
       </section>
-
     </div>
 
     {% if site.google_analytics %}

@@ -1,0 +1,26 @@
+---
+layout: page
+title: openSdev - Blogs
+permalink: /blogs.html
+---
+
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">
+	 <h2>{{- post.title -}}</h2>
+	 {% if post.subtitle %}
+           <h3>{{ post.subtitle }}</h3>
+	 {% endif %}
+      </a>
+      <span>Posted on {{ post.date | date: "%B %-d, %Y" }}</span>
+      <br>
+      {% assign excerpt_length = 50 %}
+      {{ post.excerpt | strip_html | xml_escape | truncatewords: excerpt_length }}
+      <a href="{{ post.url | absolute_url }}">[Read&nbsp;More]</a>
+      <br>
+      <br>
+    </li>
+  {% endfor %}
+</ul>

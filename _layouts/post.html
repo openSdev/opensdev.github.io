@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator | default: '-' }} {{ site.description }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator | default: '-' }} {{ site.description }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/post-style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -20,34 +20,38 @@
 
   <body>
 
-    <div class="post-menu">
-      <ul>
-        <li><a href="https://www.opensdev.com/">Home</a></li>
-      </ul>
-    </div>
-
-    <div class="post-header">
-      <h1>{% if page.title %}{{ page.title }}{% else %}<br/>{% endif %}</h1>
-      {% if page.subtitle %}
-	 <h2>{{ page.subtitle }}</h2>
-      {% endif %}
-    </div>
-
-    <div class="post-by">
-      <span>Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
-    </div>
-    <hr>
-
     <div class="post-body">
+
+      <div class="post-menu">
+        <ul>
+          <li><a href="https://www.opensdev.com/">Home</a></li>
+        </ul>
+      </div>
+
+      <div class="post-header">
+        <h1>{% if page.title %}{{ page.title }}{% else %}<br/>{% endif %}</h1>
+        {% if page.subtitle %}
+           <h2>{{ page.subtitle }}</h2>
+        {% endif %}
+      </div>
+
+      <div class="post-by">
+        <span>Posted on {{ page.date | date: "%B %-d, %Y" }}</span>
+      </div>
+
+      <hr>
+
       <section>
       {{ content }}
       </section>
+
       <div class="post-nav">
         <ul>
           <li><a class="post-prev" href="{{page.previous.url}}">&laquo; Previous Post</a></li>
 	  <li><a class="post-next" href="{{page.next.url}}">Next Post &raquo;</a></li>
         </ul>
       </div>
+
     </div>
 
     {% if site.google_analytics %}
