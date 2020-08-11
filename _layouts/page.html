@@ -6,7 +6,7 @@
     <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator | default: '-' }} {{ site.description }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
 {% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/post-style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
     <!--[if lt IE 9]>
@@ -19,20 +19,25 @@
   </head>
 
   <body>
-    <div class="post-body">
-      <div class="post-menu">
-        <ul>
-          <li><a href="https://www.opensdev.com/">Home</a></li>
-        </ul>
-      </div>
-      <section>
-        <div id="title">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-        </div>
-	<hr>
-        {{ content }}
-      </section>
+    <div id="header">
+	<nav>
+	   <li class="fork"><a href="https://www.opensdev.com/">Home</a></li>
+	   <li class="fork"><a href="/blogs.html">Blogs</a></li>
+	</nav>
+    </div>
+
+    <div class="wrapper">
+
+	<section>
+           <div id="title">
+             <h1>{{ site.title | default: site.github.repository_name }}</h1>
+             <p>{{ site.description | default: site.github.project_tagline }}</p>
+           </div>
+           <hr>
+
+           {{ content }}
+	</section>
+
     </div>
 
     {% if site.google_analytics %}
