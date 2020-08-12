@@ -52,7 +52,7 @@ layout: default
 ### UEFI
 
 1. <a href="https://github.com/tianocore/edk2/commits?author=opensdev" target="_blank">Tianocore EDK2</a>
-2. <a href="http://git.linaro.org/uefi/linaro-edk2.git/log/?h=linaro-edk2-2014.04-fixups&qt=grep&q=Shivamurthy+Shastri" target="_blank">Samsung Arndale Board</a>
+2. <a href="https://github.com/opensdev/linaro-edk2-samsung_arndale/search?q=shivamurthy&type=Commits" target="_blank">Samsung Arndale Board</a>
 3. <a href="https://github.com/96boards-hikey/OpenPlatformPkg/commits/hikey-aosp?author=opensdev" target="_blank">HiSilicon HiKey Board</a>
 
 ## Development Kits/Boards/Hardwares:
