@@ -11,7 +11,7 @@ layout: default
 
 ### Linux Kernel: BSP, Device Drivers, Board Bring-up, Build systems
 
-   * Board bring-up of <a href="http://www.arndaleboard.com/us/" target="_blank">Samsung Arndale board</a>(Exynos 5250), <a href="http://socionextus.com/blogs/sc1810-graphics-display-controller/" target="_blank">Socionext SC1810A SoC</a>(Cortex A9, Quad core)
+   * Board bring-up of <a href="https://en.wikipedia.org/wiki/Arndale_Board" target="_blank">Samsung Arndale board</a>(Exynos 5250), <a href="http://socionextus.com/blogs/sc1810-graphics-display-controller/" target="_blank">Socionext SC1810A SoC</a>(Cortex A9, Quad core)
    * Device drivers for PWM, Watchdog, ADC, GPIO, USART, External Interrupt Controller, eMMC, NAND, and SPI NAND
    * Device drivers for Signal Conditioning and Data Acquisition boards (interfaces: ADC, Digital I/O, UART)
    * Device drivers for <a href="http://asttecs.com/gsm-gateway" target="_blank">GSM board</a>, <a href="https://www.slntech.com/client-10-2/product/arinc-429/" target="_blank">ARINC429</a>
@@ -29,7 +29,7 @@ layout: default
 
 ### UEFI: Design/Development of Drivers, Board bring-up, Bug fixing
 
-   * Board bring-up of <a href="http://www.arndaleboard.org/wiki/index.php/Main_Page" target="_blank">Samsung Arndale board</a>(Exynos 5250)
+   * Board bring-up of <a href="https://en.wikipedia.org/wiki/Arndale_Board" target="_blank">Samsung Arndale board</a>(Exynos 5250)
    * Samsung Server boards(Exynos 5440, Exynos 7842), <a href="http://www.96boards.org/product/hikey" target="_blank">HiKey 96 board</a>(HiSilicon Kirin 620)
    * Device drivers for Ethernet Controller(Synopsys GMAC and XGMAC), MDIO and Ethernet PHY(Marvell 88E1111), XAUI
    * Device drivers for USB2.0(Synopsys OTG Controller), PCIe Root Complex, UART
