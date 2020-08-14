@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="purpleads-verification" content="97e2934f5107efd51d199e40">
   </head>
 
   <body>
@@ -46,8 +47,12 @@
 	    <hr>
 	    <div id="post-nav">
 	        <nav>
+		   {% if page.previous.url %}
 		   <li class="post-prev"><a href="{{page.previous.url}}">&laquo; Previous Post</a></li>
+		   {% endif %}
+		   {% if page.next.url %}
 		   <li class="post-next"><a href="{{page.next.url}}">Next Post &raquo;</a></li>
+		   {% endif %}
 		</nav>
 	     </div>
 	</section>
