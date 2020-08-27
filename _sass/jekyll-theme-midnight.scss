@@ -351,13 +351,13 @@ section {
 @media print, screen and (max-width: 480px) {
 
   #header {
-    margin-top: -20px;
+    margin-top: -10px;
   }
 
   section {
     margin-top: 40px;
   }
   nav {
-    display: none;
+    display: block;
   }
 }
