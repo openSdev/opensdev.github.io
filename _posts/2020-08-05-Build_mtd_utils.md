@@ -50,7 +50,7 @@ $ mv e2fsprogs-1.45.6 e2fsprogs
 
 Download zstd.
 ```
-$ git clone -b zstd-0.4.2 https://github.com/facebook/zstd.git
+$ git clone --branch v1.4.5 https://github.com/facebook/zstd.git
 ```
 or
 ```
@@ -136,7 +136,7 @@ $ cd $BUILD_DIR
 Cross-compile zstd.
 ```
 $ cd zstd
-$ make
+$ make allzstd
 $ cp lib/zstd.h $INSTALL_PATH/include/
 $ cp lib/deprecated/zbuff.h $INSTALL_PATH/include/
 $ cp lib/common/zstd_errors.h $INSTALL_PATH/include/
