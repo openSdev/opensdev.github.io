@@ -1,8 +1,14 @@
 ---
 layout: post
-title: Cross compile mtd-utils 2.1.2
+title: Cross compile mtd-utils 2.1.3
 subtitle: For arm and arm64
 ---
+
+Install required tools
+
+```
+$ sudo apt install build-essential gcc-arm-linux-gnueabihf git git-email autoconf libtool pkg-config uuid-dev zlib1g-dev liblzo2-dev libzstd-dev
+```
 
 Cross compilation of mtd-utils involve cross-compliling dependencies too.
 
@@ -16,13 +22,13 @@ $ BUILD_DIR=`pwd`
 
 Download latest mtd-utils.
 ```
-$ git clone -b v2.1.2 git://git.infradead.org/mtd-utils.git
+$ git clone -b v2.1.3 git://git.infradead.org/mtd-utils.git
 ```
 or
 ```
 $ wget ftp://ftp.infradead.org/pub/mtd-utils/mtd-utils-2.1.2.tar.bz2
-$ tar -xjf mtd-utils-2.1.2.tar.bz2
-$ mv mtd-utils-2.1.2 mtd-utils
+$ tar -xjf mtd-utils-2.1.3.tar.bz2
+$ mv mtd-utils-2.1.3 mtd-utils
 ```
 
 Download zilb.
