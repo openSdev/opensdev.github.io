@@ -42,7 +42,7 @@ layout: default
 
 1. <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Shivamurthy+Shastri" target="_blank" rel="noreferrer">git.kernel.org</a>
 2. <a href="http://patchwork.ozlabs.org/project/linux-mtd/list/?series=&submitter=75871&state=*&q=&archive=both&delegate=" target="_blank" rel="noreferrer">linux-mtd</a>
-3. <a href="https://patchwork.kernel.org/project/linux-mmc/list/?series=&submitter=185569&state=*&q=&archive=both&delegate=" target="_blank" rel="noreferrer"rel="noreferrer">linux-mmc</a>
+3. <a href="https://git.kernel.org/pub/scm/utils/mmc/mmc-utils.git/log/?qt=author&q=Shivamurthy+Shastri" target="_blank" rel="noreferrer">linux-mmc</a>
 
 ### U-boot
 
