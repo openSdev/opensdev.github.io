@@ -66,8 +66,6 @@ layout: default
    * <a href="http://www.96boards.org/product/carbon" target="_blank" rel="noreferrer">Carbon 96 board</a>: ARM Cortex M4 development board
    * <a href="https://beagleboard.org/blue" target="_blank" rel="noreferrer">BeagleBone Blue</a>: ARM Cortex M3 development board
    * <a href="http://www.96boards.org/product/bubblegum-96" target="_blank" rel="noreferrer">Bubblegum-96</a>: ARM64-bit development board
-   * <a href="http://zedboard.org/product/zedboard" target="_blank" rel="noreferrer">Xilinx Zed Board</a>: Development board
-   * <a href="https://developer.nvidia.com/embedded/jetson-agx-xavier-developer-kit" target="_blank" rel="noreferrer">Nvidia Jetson AGX Xavier Developer Kit</a>: ARM64-bit Development board
 
 ### Tools
 
