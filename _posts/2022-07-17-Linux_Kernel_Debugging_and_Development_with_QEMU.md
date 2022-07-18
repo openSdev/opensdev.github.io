@@ -6,7 +6,7 @@ subtitle: KVM/QEMU Series - Chapter 2
 
 We can debug the kernel with the help of QEMU, to avoid loosing work environment.
 
-Always better to build latest QEMU to get new feature for debugging NVMe driver.
+Always better to build latest QEMU to get new feature for debugging Linux Kernel.
 Here it goes....
 
 # Enable System Support #
