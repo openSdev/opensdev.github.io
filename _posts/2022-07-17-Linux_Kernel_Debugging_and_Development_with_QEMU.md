@@ -6,7 +6,7 @@ subtitle: KVM/QEMU Series - Chapter 2
 
 We can debug the kernel with the help of QEMU, to avoid loosing work environment.
 
-This is always better to build latest QEMU to get new feature for debugging NVMe driver.
+Always better to build latest QEMU to get new feature for debugging NVMe driver.
 Here it goes....
 
 # Enable System Support #
@@ -51,7 +51,7 @@ $ dmesg | grep AMD-Vi
 [    1.545239] AMD-Vi: AMD IOMMUv2 loaded and initialized
 ```
 
-If not, enable ```GRUB_CMDLINE_LINUX="iommu=pt amd_iommu=on"``` in ```/etc/default/grub```.
+If not, enable GRUB_CMDLINE_LINUX="iommu=pt amd_iommu=on" in /etc/default/grub, and then
 
 ```
 $ sudo update-grub
@@ -67,8 +67,10 @@ Now, we are good go with QEMU installation.
 ```
 $ sudo apt install make build-essential exuberant-ctags cscope git git-email
 $ sudo apt install libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev ninja-build cpu-checker
-$ sudo apt install libaio-dev libbz2-dev libcap-ng-dev libcurl4-gnutls-dev libibverbs-dev libncurses5-dev libnuma-dev librbd-dev librdmacm-dev libsasl2-dev libseccomp-dev libsnappy-dev libssh-dev liblzo2-dev
+$ sudo apt install libaio-dev libbz2-dev libcap-ng-dev libcurl4-gnutls-dev libibverbs-dev libncurses5-dev libnuma-dev librbd-dev librdmacm-dev libsasl2-dev libseccomp-dev libsnappy-dev libssh-dev liblzo2-dev virt-install
 ```
+
+Create /etc/qemu/bridge.conf and add "allow virbr0" without quotes.
 
 ## Download ##
 ```
@@ -80,21 +82,17 @@ $ git submodule update --recursive
 ```
 
 ## Build ##
-```
-$ mkdir build
-$ cd build
-```
 
 For x86_64 system:
 ```
-$ ../configure --target-list=x86_64-softmmu --with-git-submodules=validate --with-git='tsocks git' --enable-debug
+$ ./configure --target-list=x86_64-softmmu --with-git-submodules=validate --with-git='tsocks git' --enable-debug
 $ make
 $ sudo make install
 ```
 
 For full build
 ```
-../configure --with-git-submodules=validate --with-git='tsocks git' --enable-debug
+$ ./configure --with-git-submodules=validate --with-git='tsocks git' --enable-debug
 $ make
 $ sudo make install
 ```
@@ -154,10 +152,10 @@ $ sudo umount /mnt
 
 Now, we can start the Virtual Machine with our own kernel image.
 ```
-$ sudo qemu/build/qemu-system-x86_64 \
+$ sudo qemu-system-x86_64 \
 		-kernel test_kernel/bzImage --enable-kvm -m 4G -smp 4 -nographic \
 		-hda rootfs.img -append "root=/dev/sda rw console=ttyS0" \
-		-netdev bridge,id=hostnet0,br=virbr1,helper=/usr/lib/qemu/qemu-bridge-helper \
+		-netdev bridge,id=hostnet0,br=virbr0,helper=/usr/lib/qemu/qemu-bridge-helper \
 		-device virtio-net-pci,netdev=hostnet0,mac=52:54:00:6a:40:f8
 ```
 
@@ -179,15 +177,12 @@ Install openssh for connecting to the guest using SSH.
 ```
 $ apt-get update
 $ apt-get upgrade
-$ apt-get install openssh-server
 $ adduser kernel-tester
 $ usermod -aG sudo kernel-tester
+$ apt-get install vim openssh-server
 ```
 
 Reboot the Virtual Machine to apply new configurations.
 
 We can enable different kernel configuration for debugging the kernel.
 Enjoy!
-
-# NOTE #
-For more info on KVM Setup, check my [previous post](https://www.opensdev.com/2020/07/22/KVM_Setup.html "KVM Setup").
