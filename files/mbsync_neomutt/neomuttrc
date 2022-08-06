@@ -1,0 +1,146 @@
+# vim: filetype=neomuttrc
+
+## Encrypted IMAP/SMTP passwords
+source "gpg -dq ~/.config/neomutt/password.gpg |"
+
+## About Me
+set realname = 'Example Name'
+set from = 'example.name@gmail.com'
+
+## Receive mail
+# with internet connection
+#set folder = 'imaps://imap.gmail.com:993'
+#set spoolfile = '+INBOX'
+#set postponed = '+[Gmail]/Drafts'
+#set record = '+[Gmail]/Sent'
+#set trash = '+[Gmail]/Trash'
+
+# Paths
+# with local copy - for no internet connection
+set folder = '~/Mail'
+set spoolfile = '~/Mail/INBOX'
+set postponed = '~/Mail/Drafts'
+set record = '~/Mail/Sent'
+set trash = '~/Mail/Trash'
+
+set header_cache     = ~/.config/neomutt/cache/headers # store headers
+set message_cachedir = ~/.config/neomutt/cache/bodies  # store bodies
+set certificate_file = ~/.config/neomutt/certificates  # store certs (touch file)
+
+set ssl_force_tls = yes
+
+## Send mail
+set smtp_url = 'smtps://example.name@gmail.com@smtp.gmail.com:465/'
+set imap_user = 'example.name@gmail.com'
+
+## Basic Options
+set use_domain = yes		# because joe@localhost is just embarrassing
+set use_from = yes
+set mbox_type = Maildir
+set mail_check = 60
+set delete = yes
+set mark_old = no
+set wait_key = no
+set mail_check = 0
+set thorough_search = no
+set mail_check_stats = yes
+set mail_check_stats_interval = 60
+set move = no
+set uncollapse_jump= yes		# don't collapse on an unread message
+
+## Index View Options - Gmail like
+set sort = threads				# like gmail
+set sort_aux = reverse-last-date-received	# like gmail
+set date_format = "%d.%m.%y %I:%M%p"
+set index_format = "%2C [%Z] %D %-20.20F %s"
+#set index_format = "%2C %Z %?X?A& ? %D %-15.15F %s (%-4.4c)"
+set pager_index_lines = 16	# number of lines to show
+set sort_re			# thread based on regex
+
+## Header View Options
+ignore *					# ignore all headers
+unignore from: to: cc: bcc: date: subject:	# show only these
+unhdr_order *					# some distros order things by default
+hdr_order from: to: cc: bcc: date: subject:	# and in this order
+
+## Pager View Options
+set pager = "builtin"
+set pager_context = 13		# number of context lines to show
+set pager_stop			# don't go to the next message automatically
+set menu_scroll			# scroll in menus
+set tilde			# show tildes like in vim
+unset resolve			# to not download the attachment
+unset markers			# no ugly plus signs
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/plain text/enriched text/html
+
+## Compose View Options
+set editor = "vim"
+set charset = UTF-8		# value of $LANG; also fallback for send_charset
+set use_envelope_from = yes
+set edit_headers = yes          # See the headers when editing
+set sig_dashes = yes		# dashes before sig
+set askcc			# ask for CC:
+set fcc_attach			# save attachments with the body
+set text_flowed = yes
+set signature = "~/.config/neomutt/signature.mutt"
+
+set forward_format = "Fwd: %s"	# format of subject when forwarding
+set forward_quote		# include message in forwards
+set forward_decode		# decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+
+set reply_to			# reply to Reply to: field
+set reverse_name		# reply as whomever it was to
+set include			# include message in replies
+set fast_reply			# skip to compose when replying
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+
+## Sidebar View Options
+source ~/.config/neomutt/sidebar.mutt
+
+# Mailboxes to show in the Sidebar
+#mailboxes =Inbox =[Gmail]/Drafts =[Gmail]/Sent =[Gmail]/Spam =[Gmail]/Trash
+#mailboxes =MailingList =MailingList/linux-nvme =MailingList/linux-mtd
+#mailboxes =Atlassian =github =gitlab
+
+mailboxes =INBOX =Drafts =Sent =Trash
+mailboxes =MailingList =MailingList/linux-mtd =MailingList/linux-nvme
+mailboxes =CodeHub =CodeHub/atlassian =CodeHub/github =CodeHub/gitlab
+
+## Statusbar View Options
+set status_chars = " *%A"
+set status_format = "[ Folder: %f ] [%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]%>─%?p?( %p postponed )?"
+
+## Color Options
+source ~/.config/neomutt/color.mutt
+
+## Keybindings Options
+bind	index		<up>		previous-entry
+bind	index		<down>		next-entry
+bind	index		T		first-entry
+bind	index		G		last-entry
+bind	pager		<pageup>	previous-line	# Pager Key Bindings
+bind	pager		<pagedown>	next-line
+bind	pager		T		top
+bind	pager		G		bottom
+bind	index,pager	j		sidebar-prev	# Move the highlight to the next mailbox
+bind	index,pager	k		sidebar-next	# Move the highlight to the previous mailbox
+bind	index,pager	l		sidebar-open	# Open the highlighted mailbox
+
+bind	editor		<space>		noop
+bind	index,pager	c		mail		# Compose
+bind	index,pager	/		search		# Search
+bind	generic		x		tag-entry	# Select Conversation
+bind	index		x		tag-thread	# Select Conversation
+bind	pager		x		tag-message	# Select Conversation
+bind	index,pager	r		reply		# Reply
+bind	index,pager	a		group-reply	# Reply all
+bind	index,pager	f		forward-message	# Forward message with comments
+bind	index,pager	\#		delete-message	# Delete the current entry
+macro	index,pager	U		<set-flag>N "Mark as unread"
+macro	index,pager	I		<clear-flag>N "Mark as read"
+macro	index		M		"<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+# Sync Mailboxes using mbsync/isync
+macro	index,pager	O		"<shell-escape>mbsync -a<enter>" "run mbsync to sync all mail"

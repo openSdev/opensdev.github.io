@@ -1,0 +1,83 @@
+# vim: filetype=neomuttrc
+
+# Basic colors
+color normal default color235
+color indicator brightblack white
+color error red color235
+color tilde blue color235
+color message cyan color235
+color markers red color235
+color attachment color220 color235
+color search brightmagenta color235
+color quoted green color235
+color quoted1 blue color235
+color quoted2 cyan color235
+color quoted3 yellow color235
+color quoted4 red color235
+color quoted5 brightred color235
+color signature brightgreen color235
+color bold black default
+color underline black default
+color status brightcolor58 color233
+
+# Basic monocolor screen
+mono bold bold
+mono underline underline
+mono indicator reverse
+mono error bold
+
+# Index colors
+color index yellow color235 "~A" # '.*'			# Default
+color index_number blue color235
+color index_author color202 color235 "~A"
+color index_subject cyan color235 '~A'
+color index brightyellow color235 "~N"			# For new mail
+color index_author brightcolor202 color235 "~N"
+color index_subject brightcyan color235 "~N"
+color index brightyellow color235 "~T"			# Tagged mail is highlighted
+color index_author brightcolor202 color235 "~T"
+color index_subject brightcyan color235 "~T"
+
+color index_author color193 color235 "~p"		# For messages from me
+color index_author color194 color235 "~p!"		# For messages to me
+color index_author brightcolor194 color235 "~N~p!"	# For new messages to me
+
+# Sidebar colors
+color sidebar_indicator brightblack white	# Sidebar-specific color of the selected item
+color sidebar_highlight brightblack white	# Color of the highlighted, but not open, mailbox
+color sidebar_divider brightcolor58 color233	# Color of the divider separating the Sidebar from NeoMutt panels
+color sidebar_flagged red color235		# Color to give mailboxes containing flagged mail
+color sidebar_new green color235		# Color to give mailboxes containing new mail
+color sidebar_ordinary color195 color235	# Color to give mailboxes containing no new/flagged mail, etc.
+#color sidebar_spool_file color207 color238	# Color to give the spool_file mailbox
+color sidebar_unread color136 color235		# Color to give mailboxes containing no unread mail
+
+# Message Header colors
+color hdrdefault default color237
+color header yellow color237 ".*"
+color header yellow color237 "^(Date)"
+color header color202 color237 "^(From)"
+color header color202 color237 "^(CC|BCC)"
+color header color229 color237 "^(To)"
+color header cyan color237 "^(Subject)"
+
+# Regex highlighting
+color body color202 color235 "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # Email addresses
+color body magenta color235 "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+" # URL
+color body green color235 "\`[^\`]*\`" # Green text between ` and `
+color body brightblue color235 "^# \.*" # Headings as bold blue
+color body brightcyan color235 "^## \.*" # Subheadings as bold cyan
+color body brightgreen color235 "^### \.*" # Subsubheadings as bold green
+color body yellow color235 "^(\t| )*(-|\\*) \.*" # List items as yellow
+color body brightcyan color235 "[;:][-o][)/(|]" # emoticons
+color body brightcyan color235 "[;:][)(|]" # emoticons
+color body brightcyan color235 "[ ][*][^*]*[*][ ]?" # more emoticon?
+color body brightcyan color235 "[ ]?[*][^*]*[*][ ]" # more emoticon?
+color body red color235 "(BAD signature)"
+color body cyan color235 "(Good signature)"
+color body blue color235 "^gpg: Good signature .*"
+color body yellow color235 "^gpg: "
+color body yellow color235 "^gpg: BAD signature from.*"
+mono body bold "^gpg: Good signature"
+mono body bold "^gpg: BAD signature from.*"
+color body magenta color235 "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"

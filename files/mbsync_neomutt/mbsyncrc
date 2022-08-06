@@ -1,0 +1,56 @@
+# vim: filetype=mbsyncrc                                                            
+                                                                                    
+CopyArrivalDate yes     # Don't mess up message timestamps when moving them between folders.
+Sync Pull               # Download changes only, don't sync local changes up to the server.
+Create Both             # Automatically create new folders in the local copy.       
+Remove Both             # Automatically remove deleted folders from the local copy.
+Expunge Both            # Expunge deleted messages from the local copy.             
+SyncState *                                                                         
+                                                                                    
+IMAPAccount gmail-account                                                           
+SSLType IMAPS                                                                       
+Host imap.gmail.com                                                                 
+User example.name@gmail.com
+PassCmd "pass mbsync/gmail"
+Pipelinedepth 1
+Timeout 60                                                                          
+                                                                                    
+IMAPStore gmail-remote                                                              
+Account gmail-account                                                               
+                                                                                    
+MaildirStore gmail-local                                                            
+Path $HOME/Mail/                                                                    
+Inbox $HOME/Mail/INBOX                                                              
+SubFolders Verbatim                                                                 
+                                                                                    
+Channel inbox                                                                       
+Far :gmail-remote:INBOX                                                             
+Near :gmail-local:INBOX                                                             
+                                                                                    
+Channel sent                                                                        
+Far :gmail-remote:"[Gmail]/Sent Mail"                                               
+Near :gmail-local:Sent                                                              
+                                                                                    
+Channel drafts                                                                      
+Far :gmail-remote:"[Gmail]/Drafts"                                                  
+Near :gmail-local:Drafts                                                            
+                                                                                    
+Channel trash                                                                       
+Far :gmail-remote:"[Gmail]/Trash"                                                
+Near :gmail-local:Trash                                                          
+                                                                                 
+Channel shopping                                                                 
+Far :gmail-remote:"Shopping"                                                     
+Near :gmail-local:"Shopping"                                                     
+                                                                                 
+Channel amazon                                                                   
+Far :gmail-remote:"Shopping/amazon"                                        
+Near :gmail-local:"Shopping/amazon"                                              
+                                                                                 
+Group gmail-account                                                              
+Channel inbox                                                                    
+Channel sent                                                                     
+Channel drafts                                                                   
+Channel trash                                                                    
+Channel shopping                                                                 
+Channel amazon                      
