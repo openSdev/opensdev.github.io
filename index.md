@@ -11,7 +11,7 @@ layout: default
 
 ### Linux Kernel: BSP, Device Drivers, Board Bring-up, Build systems
 
-   * Board bring-up of <a href="https://en.wikipedia.org/wiki/Arndale_Board" target="_blank" rel="noreferrer">Samsung Arndale board</a>(Exynos 5250), <a href="http://socionextus.com/blogs/sc1810-graphics-display-controller/" target="_blank" rel="noreferrer">Socionext SC1810A SoC</a>(Cortex A9, Quad core)
+   * Board bring-up of <a href="https://en.wikipedia.org/wiki/Arndale_Board" target="_blank" rel="noreferrer">Samsung Arndale board</a>(Exynos 5250), <a href="https://socionextus.com/blogs/sc1810-graphics-display-controller/" target="_blank" rel="noreferrer">Socionext SC1810A SoC</a>(Cortex A9, Quad core)
    * Device drivers for PWM, Watchdog, ADC, GPIO, USART, External Interrupt Controller, eMMC, NAND, and SPI NAND
    * Device drivers for Signal Conditioning and Data Acquisition boards (interfaces: ADC, Digital I/O, UART)
    * Device drivers for <a href="http://asttecs.com/gsm-gateway" target="_blank" rel="noreferrer">GSM board</a>, <a href="https://www.slntech.com/client-10-2/product/arinc-429/" target="_blank" rel="noreferrer">ARINC429</a>
@@ -22,7 +22,7 @@ layout: default
 
 ### U-boot: Device Drivers, Board Bring-up
 
-   * Board bring-up of <a href="http://socionextus.com/blogs/sc1810-graphics-display-controller/" target="_blank" rel="noreferrer">Socionext SC1810A SoC</a>(Cortex A9, Quad core)
+   * Board bring-up of <a href="https://socionextus.com/blogs/sc1810-graphics-display-controller/" target="_blank" rel="noreferrer">Socionext SC1810A SoC</a>(Cortex A9, Quad core)
    * Device drivers for GPIO, NAND and eMMC in SPL, U-boot
    * Boot infrastructure in SPL and U-boot to boot Kernel
    * Boot time optimization (booting Kernel from SPL)
@@ -51,9 +51,10 @@ layout: default
 
 ### UEFI
 
-1. <a href="https://github.com/tianocore/edk2/commits?author=opensdev" target="_blank" rel="noreferrer">Tianocore EDK2</a>
+1. <a href="https://github.com/tianocore/edk2/commits?author=shivamurthyshastri" target="_blank" rel="noreferrer">Tianocore EDK2</a>
 2. <a href="https://github.com/opensdev/linaro-edk2-samsung_arndale/search?q=shivamurthy&type=Commits" target="_blank" rel="noreferrer">Samsung Arndale Board</a>
-3. <a href="https://github.com/96boards-hikey/OpenPlatformPkg/commits/hikey-aosp?author=opensdev" target="_blank" rel="noreferrer">HiSilicon HiKey Board</a>
+   (or <a href="https://git.linaro.org/uefi/linaro-edk2.git/log/?h=linaro-edk2-2014.04-fixups&qt=grep&q=Shivamurthy+Shastri" target="_blank" rel="norederrer">this link</a>)
+3. <a href="https://github.com/96boards-hikey/OpenPlatformPkg/commits/hikey-aosp?author=shivamurthyshastri" target="_blank" rel="noreferrer">HiSilicon HiKey Board</a>
 
 ## Development Kits/Boards/Hardwares:
 
@@ -74,6 +75,6 @@ layout: default
 
 ## Links
 
-<a href="mailto:shivamurthy.shastri@opensdev.com">Email</a> &#0149; <a href="https://github.com/opensdev" target="_blank" rel="noreferrer">GitHub</a> &#0149; <a href="https://twitter.com/opensdev" target="_blank" rel="noreferrer">Twitter</a>
+<a href="mailto:shivamurthy.shastri@opensdev.com">Email</a> &#0149; <a href="https://github.com/shivamurthyshastri" target="_blank" rel="noreferrer">GitHub</a> &#0149; <a href="https://twitter.com/opensdev" target="_blank" rel="noreferrer">Twitter</a>
 
-<p style="color:#696969">&#9400; 2017-2019 openSdev</p>
+<p style="color:#696969">&#9400; 2017-2022 openSdev</p>
